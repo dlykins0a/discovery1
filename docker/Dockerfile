@@ -24,5 +24,5 @@ RUN mvn package -Dmaven.test.skip=true
 FROM openjdk:11-jdk
 COPY --from=0 /build/target/discovery-service-1.1-SNAPSHOT.jar /app/target/discovery-service-1.1-SNAPSHOT.jar
 
-EXPOSE 8761
-ENTRYPOINT [ "java", "-jar", "/app/target/discovery-service-1.1-SNAPSHOT.jar", "--server.port=8761" ]
+EXPOSE 8061
+ENTRYPOINT [ "java", "-jar", "/app/target/discovery-service-1.1-SNAPSHOT.jar", "--server.port=8061" ]
